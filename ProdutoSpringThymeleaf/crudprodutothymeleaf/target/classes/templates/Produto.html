@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Produto</title>
+    <style>
+      table {
+        width: 90%;
+        margin: auto;
+      }
+
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+
+      th,
+      td {
+        padding: 7px;
+        text-align: left;
+      }
+
+      .centralizatitulo {
+        text-align: center;
+      }
+
+      h1 {
+        text-align: center;
+        font-size: 18px; 
+        display: inline-block;
+        vertical-align: middle;
+        width: auto;
+      }
+	header {
+	        display: table;
+	        margin: 0 auto 30px;
+	        width: 100%;
+	        max-width: 90%;
+	        height: 100px;
+	        text-align: center;
+	border-bottom: 1px solid #000000;
+	padding-bottom: 30px;
+	      }
+      header img {
+        margin-right: 20px;
+        vertical-align: middle;
+      }
+
+      header h1 {
+      }
+      h3{font-size: 12px;
+      	 text-align: left;
+      	 margin-left: 32px;
+      
+      }
+      h2{text-align: center;
+      	font-size: 12px;
+      
+      }
+
+      @page {
+        size: A4 portrait;
+        margin-left: 10mm;
+
+        @bottom-right {
+          content: " Página " counter(page) "/" counter(pages);
+          font-size: 5pt;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <img src="${LOGO}" alt="some text" width="100" height="100"></img>
+      <h1> PROCESSO FISCALIZAÇÃO <br>CORPO DE BOMBEIROS MILITAR</br></h1>
+    </header>
+    	<h2 >DADOS PROCESSO FISCALIZAÇÃO</h2>
+		<h3>Dados do Processo:</h3>
+    <table>
+      <thead>
+        <tr>
+          <th colspan="2" class="centralizatitulo">Produtos</th>
+        </tr>
+        <tr>
+          <th colspan="2" class="centralizatitulo">
+            Informaçōes dos Produtos cadastrados
+          </th>
+        </tr>
+      </thead>
+      <tr>
+        <th>Codigo Produto:</th>
+        <td>${COD}</td>
+      </tr>
+      <tr>
+        <th>Nome:</th>
+        <td>${NOME}</td>
+      </tr>
+      <tr>
+        <th>Preço:</th>
+        <td>${PRECO}</td>
+      </tr>
+    </table>
+  </body>
+</html>
